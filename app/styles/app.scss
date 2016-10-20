@@ -12,8 +12,31 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+html {
+  height: 100%
+}
+
+
+
 body{
-  font-family: Helvetica;
+ content: "";
+ background-image: url('../images/fashion4.jpg');
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
+ opacity: 0.85;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ overflow: none;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+
 }
 
 img {
@@ -22,4 +45,44 @@ img {
 
 .delete{
 float: right;
+}
+
+i {
+  border: 1px solid #F93C64;
+  // border-radius: 5px;
+  padding: 9px;
+  margin-left: 166px;
+  background: #F93C64;
+  color: white;
+}
+
+.btn-primary {
+  background: #F93C64;
+  border:none;
+  padding: 10px;
+  width: 150px;
+  margin-left: 680px;
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+}
+.form-control {
+  width: 450px;
+  border-radius: 0px;
+  height: 40px;
+}
+
+.form-group {
+  margin-bottom: 7px;
+  margin-left:200px
+}
+
+.fa-phone,
+.fa-user {
+  padding: 12px 12px;
+  margin-left: 127px;
+}
+.fa-birthday-cake,
+.fa-envelope{
+  padding: 12px 11px;
+  margin-left:127px;
 }
