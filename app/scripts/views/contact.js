@@ -75,6 +75,9 @@ var ContactFormView = Backbone.View.extend({
     var phoneForm = $('#phone').val();
     var birthdayForm = $('#birthday').val();
 
+
+    //MATIAS HELPED ME HERE:
+    //ONLY NEED 1 COLLECTION HERE SO THAT I AM NOT SENDING THE SERVER EXTRA EMPTY FORM INPUTS
     this.collection.create({name: nameForm, email: emailForm, phone: phoneForm, birthday: birthdayForm});
 
 
