@@ -31,7 +31,7 @@ var ContactItemView = Backbone.View.extend({
   className: 'list-group-item',
   template:  contactItemTemplate,
   events: {
-    'click .delete': 'complete'
+    'click .delete': 'complete'       //NEEDS TO BE IN QUOTES B/C OTHERWISE IT WILL THINK It is a variable.
   },
   initialize: function(){
     this.listenTo(this.model, 'destroy', this.remove);
@@ -44,11 +44,7 @@ var ContactItemView = Backbone.View.extend({
     var renderedTemplate = this.template(context);
 
     this.$el.html(renderedTemplate);
-    this.$el.html(this.model.get('form-group'));
-    // this.$el.html(this.model.get('name'));
-    // this.$el.html(this.model.get('email'));
-    // this.$el.html(this.model.get('phonenumber'));
-    // this.$el.html(this.model.get('birthday'));
+
 
     return this;
   },
@@ -95,7 +91,7 @@ var ContactFormView = Backbone.View.extend({
 
 
 var ContactConfirmModal = Backbone.View.extend({
-  el: $('#confirm-delete')[0],
+  el: $('#confirm-delete')[0],            //passes jquery object directly to element property on the view.
   events: {
     "click .btn-primary": 'delete',
   },
@@ -112,6 +108,8 @@ var ContactConfirmModal = Backbone.View.extend({
   }
 });
 
+
+//Confirm Modal Singleton
 var confirmModal = new ContactConfirmModal();
 
 module.exports = {
