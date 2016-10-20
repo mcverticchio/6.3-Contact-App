@@ -71,19 +71,16 @@ var ContactFormView = Backbone.View.extend({
     event.preventDefault();
 
     var nameForm = $('#name').val();
-    this.collection.create({name: nameForm});
-    $('#name').val('');
-
     var emailForm = $('#email').val();
-    this.collection.create({email: emailForm});
-    $('#email').val('');
-
     var phoneForm = $('#phone').val();
-    this.collection.create({phone: phoneForm});
-    $('#phone').val('');
-
     var birthdayForm = $('#birthday').val();
-    this.collection.create({birthday: birthdayForm});
+
+    this.collection.create({name: nameForm, email: emailForm, phone: phoneForm, birthday: birthdayForm});
+
+
+    $('#name').val('');
+    $('#email').val('');
+    $('#phone').val('');
     $('#birthday').val('');
 
   }
