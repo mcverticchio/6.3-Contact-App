@@ -1,7 +1,10 @@
 var Backbone = require('backbone');
 
 var Contact = Backbone.Model.extend({
-  idAttribute: '_id'
+  idAttribute: '_id',
+  defaults: {
+    visible: true
+  }
 });
 
 var ContactCollection = Backbone.Collection.extend({

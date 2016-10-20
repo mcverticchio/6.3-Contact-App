@@ -15,10 +15,13 @@ $(function(){
   var contactList = new views.ContactListView({collection: contactCollection});
   $('.app').append(contactList.render().el);
 
-
 contactCollection.fetch();
 
-
+// contactCollection.fetch().then(function(){
+//   contactCollection.each(function(model){
+//     model.destroy();
+//   })
+// });
 
 
 });

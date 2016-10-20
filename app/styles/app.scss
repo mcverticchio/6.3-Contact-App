@@ -12,6 +12,14 @@ $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
   box-sizing: border-box;
 }
 
+body{
+  font-family: Helvetica;
+}
+
 img {
   max-width: 100%;
+}
+
+.delete{
+float: right;
 }
